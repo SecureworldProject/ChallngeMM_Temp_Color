@@ -7,6 +7,12 @@ Presenta una fiabilidad baja, al realizar el experimento con imágenes tomadas d
 Se pide al usuario que haga una foto a una superficie blanca dentro de la sala y la envíe al PC.  
 La imagen se carga en plano RGB y se transforma al plano XYZ. Luego se extraen los valores de las matrices de cada componente X, Y y Z para calcular la CCT de la imagen. Este trabajo se ha basado en la investigación desarrollada en: https://ams.com/documents/20143/80162/TCS34xx_AN000517_1-00.pdf
 
+Ficheros:
+
+- Temp_Color.py: La implementación completa del challenge se encuentra en este único fichero python
+- cap_temp.jpeg : fichero de prueba. La captura enviada por el server bluetooth debe tener este nombre para que no haya que hacer cambios en el código fuente.
+- lock_Temp_Color: es un fichero generado durante la ejecución para impedir que dos challenges multimedia se ejecuten a la vez
+
 El challenge da como resultado una clave de longitud 4 que estará entre los valores de 1000 a 9999, correspondientes a la CCT en grados Kelvin.
 
 # Requisitos
@@ -27,14 +33,22 @@ IMPORTANTE: Tras instalar opencv, la dll python3.dll de instalacion de python ca
 # Configuración json ejemplo
 {
 	"FileName": "challenge_loader_python.dll",
+ 
 	"Description": "This is a simple challenge.",
+ 
 	"Props": {
+ 
 		"module_python": "Temp_Color",
+  
 		"validity_time": 3600,
+  
 		"refresh_time": 10,
+  
    
   },
+  
   "Requirements": "camera" 
+  
 }
 
 
