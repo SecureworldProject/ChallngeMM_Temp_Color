@@ -1,4 +1,3 @@
-from math import log10, sqrt
 import cv2
 # para instalar la libreria openCV simplemente:
 # pip3 install opencv-python
@@ -61,7 +60,7 @@ def executeChallenge():
     #popup msgbox pidiendo interaccion
     #---------------------------------
     #sent=easygui.ynbox(props_dict["interactionText"], "challenge MM: RGB", choices=("Yes","Not"))
-    sent=conexion=messagebox.askyesno('challenge MM: Temp_Color',"¿Has enviado la imagen desde el móvil a tu PC?")
+    sent=conexion=messagebox.askyesno('challenge MM: Temp_Color',"Por favor, haga una foto de una superficie blanca solo con la luz ambiental de la sala, sin incidencia de luz natural. Envíe la imagen desde el móvil a tu PC?")
     print(sent)
 
     #Si el usuario responde que no ha enviado la imagen, devolvemos clave y longitud 0
@@ -74,9 +73,8 @@ def executeChallenge():
         print ("result:",result)
         return result # clave cero, longitud cero
     
-    if (DEBUG_MODE==True):
-        
-        filename="cap_temp.jpeg"
+    
+    filename="cap_temp.jpeg"
     
         
     if os.path.exists(folder+"/"+filename):    
