@@ -31,6 +31,7 @@ IMPORTANTE: Tras instalar opencv, la dll python3.dll de instalacion de python ca
 - Tkinter para las GUI utilizadas para interactuar con el usuario. https://www.pythontutorial.net/tkinter/
 
 # Configuración json ejemplo
+```json
 {
 	"FileName": "challenge_loader_python.dll",
  
@@ -50,6 +51,7 @@ IMPORTANTE: Tras instalar opencv, la dll python3.dll de instalacion de python ca
   "Requirements": "camera" 
   
 }
+```
 
 
 
