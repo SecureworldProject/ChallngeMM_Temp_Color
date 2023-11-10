@@ -137,7 +137,7 @@ def executeChallenge():
     cv2.destroyAllWindows()
 
     #construccion de la respuesta
-    cad="%d"%(CCTR)
+    cad="%d"%(CCTR/100)
     key = bytes(cad,'utf-8')
     key_size = len(key)
     result =(key, key_size)
