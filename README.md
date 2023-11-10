@@ -13,14 +13,13 @@ Ficheros:
 - cap_temp.jpeg : fichero de prueba. La captura enviada por el server bluetooth debe tener este nombre para que no haya que hacer cambios en el código fuente.
 - lock_Temp_Color: es un fichero generado durante la ejecución para impedir que dos challenges multimedia se ejecuten a la vez
 
-El challenge da como resultado una clave de longitud 4 que estará entre los valores de 1000 a 9999, correspondientes a la CCT en grados Kelvin.
+El challenge da como resultado una clave de longitud 1 o 2 que estará entre los valores de 0 a 99, correspondientes a la CCT en grados Kelvin cuantizada en cuantos de 100.
 
 # Requisitos
 La variable de entorno **SECUREMIRROR_CAPTURES** debe existir y apuntar al path donde el server bluetooth deposita las capturas
 El fichero de captura se debe llamar "cap_temp.jpeg".
 
-Hay una variable en el challenge (en ambos challenges) llamada **"DEBUG_MODE"** que la puedes cambiar a True o False. En caso True en lugar del fichero capture.jpg se usa paisaje.jpg y ademas no se borra el fichero capture.jpg despues de procesar. Otra caracteristica de DEBUG_MODE=True es que muestra las imagenes en pantalla (molestando un poco, claro)
-En caso DEBUG_MODE=fase, se usa "capture.jpg" y ademas la imagen se borra tras el procesamiento
+Hay una variable en el challenge llamada **"DEBUG_MODE"** que la puedes cambiar a True o False. En caso DEBUG_MODE=false, la imagen se borra tras el procesamiento.
 Las principales librerías utilizadas son las siguientes:
 - Opencv : Usada para la carga de imagen y transformación de plano RGB a XYZ.
 
